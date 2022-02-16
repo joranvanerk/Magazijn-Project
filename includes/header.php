@@ -7,9 +7,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<style>
 			.header{
-				width:100%;
-				height:60px;
-				background-color:#E6E6FA;
+				display: flex;
+                width: 100%;
+                height: 60px;
+                background-color: #E6E6FA;
+                align-content: flex-start;
+                justify-content: space-between;
 			}
 			body{
 				margin:0px;
