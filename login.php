@@ -7,7 +7,7 @@ if(isset($_POST["inloggen"])){
     if(isset($_POST["wachtwoord"])){
       $gebruikersnaam = $_POST["gebruikersnaam"];
       $wachtwoord_plain = $_POST["wachtwoord"];
-      
+      // add login stuff including cleaning and loggin in
     }
   }
 }
