@@ -2,12 +2,42 @@
 
 include_once("./includes/meta.php");
 
+if(isset($_SESSION["login"])){
+  header("location: ./dashboard.php");
+}
+
+if(isset($_GET["wronglogin"])){
+  $errormessage = '<div class="alert alert-danger" role="alert">
+    Ingevoerde gegevens zijn niet juist!
+  </div>';
+}
+
+if(isset($_GET["wrongaccount"])){
+  $errormessage = '<div class="alert alert-danger" role="alert">
+    Geen account gevonden!
+  </div>';
+}
+
 if(isset($_POST["inloggen"])){
-  if(isset($_POST["gebruikersnaam"])){
+  if(isset($_POST["mail"])){
     if(isset($_POST["wachtwoord"])){
-      $gebruikersnaam = $_POST["gebruikersnaam"];
+      $mail = $_POST["mail"];
       $wachtwoord_plain = $_POST["wachtwoord"];
-      // add login stuff including cleaning and loggin in
+      $select_user_query = mysqli_query($conn, "SELECT * FROM `users` WHERE `mail`='$mail'");
+      $select_user_data = mysqli_fetch_assoc($select_user_query);
+      $wachtwoord = $select_user_data["password"];
+      if(mysqli_num_rows($select_user_query)){
+        if(password_verify($wachtwoord_plain, $wachtwoord)){
+          $_SESSION["login"] = true;
+          $_SESSION["role"] = $select_user_data["permissions"];
+          $_SESSION["username"] = $select_user_data["username"];
+          header("location: ./dashboard.php");
+        }else{
+          header("location: ?wronglogin");
+        }
+      }else{
+        header("location: ?wrongaccount");
+      }
     }
   }
 }
@@ -51,10 +81,11 @@ if(isset($_POST["inloggen"])){
           <div class="card-body">
             <div class="text-center">
               <img src="./includes/logo.png" style="width: 250px; margin-bottom: 50px;">
+              <?php if(isset($errormessage)){ echo $errormessage; } ?>
               <form action="" method="POST">
               <div class="form-floating mb-3">
-                <input type="email" class="form-control radiusB" name="gebruikersnaam" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Gebruikersnaam</label>
+                <input type="email" class="form-control radiusB" name="mail" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email</label>
               </div>
               <div class="form-floating">
                 <input type="password" class="form-control radiusB" name="wachtwoord" id="floatingPassword" placeholder="Password">
