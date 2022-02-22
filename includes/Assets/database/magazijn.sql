@@ -66,10 +66,10 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `idusers` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(16) NOT NULL,
-  `password` varchar(16) NOT NULL,
+  `password` varchar(128) NOT NULL,
   `mail` varchar(64) NOT NULL,
   `permissions` int(1) NOT NULL,
-  `timestamp` int(32) NOT NULL,
+  `timestamp` varchar(32) NOT NULL,
   PRIMARY KEY (`idusers`),
   UNIQUE KEY `idusers_UNIQUE` (`idusers`),
   UNIQUE KEY `username_UNIQUE` (`username`),
