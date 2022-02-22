@@ -12,6 +12,7 @@
 
 <?php
 
-// php hier zoals databases
+// connectie maken met database
+include_once("./db.php");
 
  ?>
