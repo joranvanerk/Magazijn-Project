@@ -12,6 +12,10 @@
 
 <?php
 
-// php hier zoals databases
+// start session
+session_start();
+
+// start connection with database
+include_once("./includes/db.php");
 
  ?>
