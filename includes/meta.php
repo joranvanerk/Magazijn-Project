@@ -12,7 +12,10 @@
 
 <?php
 
-// connectie maken met database
-include_once("./db.php");
+// start session
+session_start();
+
+// start connection with database
+include_once("./includes/db.php");
 
  ?>
