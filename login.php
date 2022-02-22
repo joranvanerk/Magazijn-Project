@@ -21,8 +21,8 @@ if(isset($_GET["wrongaccount"])){
 if(isset($_POST["inloggen"])){
   if(isset($_POST["mail"])){
     if(isset($_POST["wachtwoord"])){
-      $mail = $_POST["mail"];
-      $wachtwoord_plain = $_POST["wachtwoord"];
+      $mail = cleaning($_POST["mail"]);
+      $wachtwoord_plain = cleaning($_POST["wachtwoord"]);
       $select_user_query = mysqli_query($conn, "SELECT * FROM `users` WHERE `mail`='$mail'");
       $select_user_data = mysqli_fetch_assoc($select_user_query);
       $wachtwoord = $select_user_data["password"];
