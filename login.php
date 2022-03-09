@@ -2,22 +2,26 @@
 
 include_once("./includes/meta.php");
 
+// check session and redirect is ok
 if(isset($_SESSION["login"])){
   header("location: ./dashboard.php");
 }
 
+// show the error message for the wrong login details
 if(isset($_GET["wronglogin"])){
   $errormessage = '<div class="alert alert-danger" role="alert">
     Ingevoerde gegevens zijn niet juist!
   </div>';
 }
 
+// show the error message for when no account is found
 if(isset($_GET["wrongaccount"])){
   $errormessage = '<div class="alert alert-danger" role="alert">
     Geen account gevonden!
   </div>';
 }
 
+// check for login details and check if ok, if so, create a login session for the user
 if(isset($_POST["inloggen"])){
   if(isset($_POST["mail"])){
     if(isset($_POST["wachtwoord"])){
