@@ -6,13 +6,23 @@ $QUERY = "SELECT * FROM users";
 $results = mysqli_query($conn, $QUERY);
 $rows = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
+if(isset($_POST["submit"])){
+    // define variables for the query
+    $permission = cleaning($_POST["permission"]);
+    $userid = cleaning($_POST["user_id"]);
+
+    // execute query with cleaned variables
+    mysqli_query($conn, "UPDATE `users` SET `permissions` = $permission WHERE `idusers` = $userid");
+  }
+
  ?>
+
+<form action="" method="POST">
 
  <select name="user_id">
      <?php
      foreach($rows as $row) {
 
-        ?> <h1>test</h1> <?php
         echo '<option value="'.$row["idusers"].'">'.$row["username"].'</option>';
 
     }
@@ -28,4 +38,6 @@ $rows = mysqli_fetch_all($results, MYSQLI_ASSOC);
 </select>
 
 <button type="submit" name="submit">Edit Permission</button>
+
+</form>
 
