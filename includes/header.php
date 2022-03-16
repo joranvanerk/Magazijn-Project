@@ -15,6 +15,6 @@
   </form>
 
   <!-- user page icon -->
-  <a class="navbar-brand text-white" href="dashboard.php">Gebruikersnaam <i class="fa fa-user text-white fa-2xl"></i></a>
+  <a class="navbar-brand text-white" href="profile.php">Gebruikersnaam <i class="fa fa-user text-white fa-2xl"></i></a>
 
 </nav>
