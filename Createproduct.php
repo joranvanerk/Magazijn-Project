@@ -1,5 +1,6 @@
 <?php
 include_once("./includes/meta.php");
+include_once("./includes/header.php");
 
 if(isset($_POST["submit"])){
   // define variables for the query
