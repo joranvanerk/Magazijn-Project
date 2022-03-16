@@ -144,6 +144,7 @@ body.active .wrapper .section {
                     <a href="#">
                         <span class="icon"><i class="fas fa-shopping-basket"></i></span>
                         <span class="item">Nieuw artikel</span>
+                        
                     </a>
                 </li>
                 <h5 style=" color:blue;">MERKEN</h5>
