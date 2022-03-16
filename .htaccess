@@ -12,5 +12,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
 ErrorDocument 401 "Sorry, deze pagina is niet openbaar toegankelijk!"
-ErrorDocument 403 /
+ErrorDocument 403 "Sorry, er is een fout opgetreden."
 ErrorDocument 404 "Sorry, de ingevulde pagina kon niet worden gevonden!"
