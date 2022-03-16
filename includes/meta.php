@@ -16,6 +16,11 @@
 // start session
 session_start();
 
+if(isset($_GET["logout"])){
+  session_destroy();
+  echo '<meta http-equiv="refresh" content="0; URL=./index.php">';
+}
+
 // start connection with database
 include_once("./includes/db.php");
 
