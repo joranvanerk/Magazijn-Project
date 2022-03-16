@@ -6,7 +6,8 @@ include_once("./includes/meta.php");
 
  ?>
 
- <!-- html code hier -->
+ <!-- html code hier / form -->
+ 
     <form action="Createproduct.php" method="POST">
         <input type="text" name="name" placeholder="Itemname">
         <br>
