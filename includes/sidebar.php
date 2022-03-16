@@ -89,22 +89,28 @@
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
         <div class="col">
-        <a href="mijn.php" class="menuitem"><i class="fas fa-box"></i> Artikelbeheer</a>
+        <a href="createproduct.php" class="menuitem"><i class="fas fa-box"></i> Artikelbeheer</a>
         </div>
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
         <div class="col">
-        <a href="vacatures.php" class="menuitem"><i class="fas fa-briefcase"></i> Bedrijfsbeheer</a>
+        <a href="" class="menuitem"><i class="fas fa-briefcase"></i> Bedrijfsbeheer</a>
         </div>
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
         <div class="col">
-        <a href="contact.php" class="menuitem" ><i class="far fa-envelope"></i> Aanvragen</a>
+        <a href="" class="menuitem" ><i class="far fa-envelope"></i> Aanvragen</a>
         </div>
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
         <div class="col">
-        <a href="top20.php" class="menuitem" style="" ><i class="fas fa-list-ol"></i> Instellingen</a>
+        <a href="" class="menuitem" style="" ><i class="fas fa-list-ol"></i> Instellingen</a>
+<!-- <hr style=" margin-top: 0.5rem;"> -->
+        </div>
+      </div>
+      <div class="row spacingitem" style="margin-left: 1vw;" >
+        <div class="col">
+        <a href="?logout" class="menuitem" style="color: red !important;" ><i class="fas fa-arrow-right-to-bracket"></i> Uitloggen</a>
 <!-- <hr style=" margin-top: 0.5rem;"> -->
         </div>
       </div>
