@@ -1,5 +1,6 @@
 <?php
 include_once("./includes/meta.php");
+include_once("./includes/sidebar.php");
 include_once("./includes/header.php");
 
 if(isset($_POST["submit"])){
@@ -19,3 +20,5 @@ if(isset($_POST["submit"])){
     <input class="form-control" type="text" name="stock" placeholder="Totalstock">
     <button class="btn btn-primary" type="submit" name="submit">Confirm</button>
 </form>
+
+ <?php include_once("./includes/footer.php"); ?>
