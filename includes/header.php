@@ -9,7 +9,7 @@
       <div class="input-group-text" style="background-color: #FFFFFF; border: none; border-radius: 25px 0px 0px 25px; padding: 15px;"><i class="fa fa fa-search"></i></div>
       <input placeholder="Zoeken.." style="border: none;
       /* caret-color: transparent; */
-        font-size: 14px; border-radius: 0px 25px 25px 0px; padding: 15px; padding-right: 50px;" type="text" name="nav_num" autofocus>
+        font-size: 14px; border-radius: 0px 25px 25px 0px; padding: 15px; padding-right: 50px;" type="text" name="nav_num">
       </div>
     <button style="opacity: 0%;" type="submit" name="nav_submit"></button>
   </form>
