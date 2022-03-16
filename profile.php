@@ -3,11 +3,12 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <?php
-    include_once("./includes/meta.php");
-    include_once("./includes/header.php");
+include_once("./includes/meta.php");
+include_once("./includes/sidebar.php");
+include_once("./includes/header.php");
 ?>
 <style>
-    
+
 .emp-profile {
     padding: 3%;
     margin-top: 3%;
@@ -15,7 +16,7 @@
     border-radius: 0.5rem;
     background: #fff;
 }
-/* 
+/*
 .profile-img {
     text-align: center;
 }
@@ -151,4 +152,6 @@
             </div>
         </div>
     </form>
-</div> 
+</div>
+
+ <?php include_once("./includes/footer.php"); ?>
