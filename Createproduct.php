@@ -13,8 +13,8 @@ if(isset($_POST["submit"])){
 ?>
 
 <form action="" method="POST">
-    <input type="text" name="name" placeholder="Itemname">
+    <input class="form-control" type="text" name="name" placeholder="Itemname">
     <br>
-    <input type="text" name="stock" placeholder="Totalstock">
-    <button type="submit" name="submit">Confirm</button>
+    <input class="form-control" type="text" name="stock" placeholder="Totalstock">
+    <button class="btn btn-primary" type="submit" name="submit">Confirm</button>
 </form>
