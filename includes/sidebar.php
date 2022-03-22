@@ -4,8 +4,6 @@
     overflow-x: hidden;
  }
 
-.tyss{}
-
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
