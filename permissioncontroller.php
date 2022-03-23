@@ -1,6 +1,8 @@
 <?php
 
 include_once("./includes/meta.php");
+include_once("./includes/sidebar.php");
+include_once("./includes/header.php");
 
 $QUERY = "SELECT * FROM users";
 $results = mysqli_query($conn, $QUERY);
@@ -40,4 +42,6 @@ if(isset($_POST["submit"])){
 <button type="submit" name="submit">Edit Permission</button>
 
 </form>
+
+<?php include_once("./includes/footer.php"); ?>
 

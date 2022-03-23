@@ -32,6 +32,7 @@ include_once("./includes/header.php");
       <a href="profile" class="btn" style="border-color: #588CAA; color: #588CAA;">Profiel</a>
       <a href="requestnewproduct" class="btn" style="border-color: #588CAA; color: #588CAA;">Nieuw product aanvragen</a>
       <a href="instellingen" class="btn" style="border-color: #588CAA; color: #588CAA;">Instellingen</a>
+      <a href="permissioncontroller" class="btn" style="border-color: #588CAA; color: #588CAA;">Rollen bewerken</a>
     </p>
   </div>
 </div>
