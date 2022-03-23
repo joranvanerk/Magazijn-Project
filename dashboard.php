@@ -13,7 +13,9 @@ include_once("./includes/header.php");
    <h2 style="margin-left: 10px; color: white;">Welkom <?= $_SESSION["username"] ?> in het magazijn, want je magazijn!</h2>
    <br>
  </div>
+ 
  <br>
+
  <div class="card">
   <div class="card-body text-center">
     <h5 class="card-title">Laatste nieuws</h5>
