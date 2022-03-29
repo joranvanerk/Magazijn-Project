@@ -8,7 +8,7 @@ include_once("./includes/sidebar.php");
 include_once("./includes/header.php");
 ?>
 <?php
-
+//Code to connect to the data base, so you can see th information
  $sql = "SELECT * FROM `stock`";
 
  $result = mysqli_query($conn, $sql);
@@ -21,6 +21,7 @@ include_once("./includes/header.php");
 
   while ($record = mysqli_fetch_assoc($result)) 
   {
+      //code to get the code in the right way, there in lowercasses
    $records .= "<tr>
      <th scope='row'>" . $record["id"] . "</th>
      <td> " . $record["itemname"] . "</td>
@@ -45,7 +46,7 @@ include_once("./includes/header.php");
   }
  // var_dump($records);
 ?>
-
+<!-- Html code staart here, this is what you will see when you go on the page -->
 <div class="card">
     <div class="container-fluid">
         <div class="row">
@@ -64,6 +65,7 @@ include_once("./includes/header.php");
                     </thead>
                     <tbody>
                         <?php
+                        //So you can see the database info, with out this you will not see the information
                 echo $records;
               ?>
                     </tbody>
