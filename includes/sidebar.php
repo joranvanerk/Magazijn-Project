@@ -52,6 +52,7 @@
   transition: 0.3s;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 
@@ -160,7 +161,12 @@ document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
         <div class="col">
-        <a href="" class="menuitem"><i class="fas fa-briefcase"></i> Bedrijfsbeheer</a>
+        <li class="nav-item has-submenu">
+    		<a class="nav-link nav-edit menuitem"><i class="fas fa-briefcase"></i> Bedrijfsbeheer</a>
+    		<ul class="submenu collapse">
+    			<li><a class="nav-link nav-edit-item" href="gebruikersbeheer">Gebruikersbeheer</a></li>
+    		</ul>
+    	</li>
         </div>
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
