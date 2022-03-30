@@ -8,6 +8,14 @@ include_once("./includes/sidebar.php");
 include_once("./includes/header.php");
 ?>
 <?php
+
+// code to delete a record
+if(isset($_GET["delete"])){
+    $id_delete = cleaning($_GET["delete"]);
+    mysqli_query($conn, "DELETE FROM `stock` WHERE `id`=$id_delete");
+    echo '<meta http-equiv="refresh" content="0;url=./stockRead" />';
+}
+
 //Code to connect to the data base, so you can see th information
  $sql = "SELECT * FROM `stock`";
 
@@ -37,8 +45,8 @@ include_once("./includes/header.php");
      </td >
 
      <td>
-        <a href='./delete.php?id=" . $record["id"] . "'>
-        <button style='background-color:red; border-color:black; color:white'> Delete</button>
+        <a href='?delete=" . $record["id"] . "' class='btn' style='background-color:red; border-color:black; color:white'>
+            Delete
         </a>
       </td >
 
