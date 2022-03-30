@@ -64,7 +64,7 @@ if(isset($_GET["delete"])){
                     <thead>
                         <tr>
                             <th scope="col">id</th>
-                            <th scope="col">Itam Name</th>
+                            <th scope="col">Item Name</th>
                             <th scope="col">Total Stock</th>
                             <th scope="col">Totaal Availability</th>
                             <th scope="col"> </th>
