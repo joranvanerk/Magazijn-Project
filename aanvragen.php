@@ -4,6 +4,25 @@ include_once("./includes/meta.php");
 include_once("./includes/sidebar.php");
 include_once("./includes/header.php");
 
+if(isset($_GET["afkeuren"])){
+  $id_given = cleaning($_GET["afkeuren"]);
+  mysqli_query($conn, "UPDATE `requests` SET `status`='0' WHERE `id`='$id_given'");
+  echo '<meta http-equiv="refresh" content="0; URL=./aanvragen">';
+}
+
+if(isset($_GET["goedkeuren"])){
+  $id_given = cleaning($_GET["goedkeuren"]);
+  mysqli_query($conn, "UPDATE `requests` SET `status`='1' WHERE `id`='$id_given'");
+  echo '<meta http-equiv="refresh" content="0; URL=./aanvragen">';
+}
+
+if(isset($_GET["verwijder"])){
+  $id_given = cleaning($_GET["verwijder"]);
+  mysqli_query($conn, "UPDATE `requests` SET `status`='2' WHERE `id`='$id_given'");
+  echo '<meta http-equiv="refresh" content="0; URL=./aanvragen">';
+}
+
+
 // get all requests
 $data_1 = "";
 $get_requests_query = mysqli_query($conn, "SELECT * FROM `requests` INNER JOIN users ON requests.useremail = users.mail WHERE `status`='0' ORDER BY `username` DESC LIMIT 100");
@@ -15,7 +34,7 @@ while($requests_data = mysqli_fetch_assoc($get_requests_query)){
         <td>' . $requests_data["description"] . '</td>
         <td>' . $requests_data["quantity"] . '</td>
         <td>' . $requests_data["expirationdate"] . '</td>
-        <td><a class="btn btn-success"><i class="fas fa-check"></i></a> <a class="btn btn-danger"><i class="fas fa-times"></i></a></td>
+        <td><a class="btn btn-success" href="?goedkeuren=' . $requests_data["id"] . '"><i class="fas fa-check"></i></a> <a class="btn btn-danger" href="?verwijder=' . $requests_data["id"] . '"><i class="fas fa-times"></i></a></td>
       </tr>';
 }
 
@@ -30,7 +49,7 @@ while($requests_aproved_data = mysqli_fetch_assoc($get_aproved_requests_query)){
         <td>' . $requests_aproved_data["description"] . '</td>
         <td>' . $requests_aproved_data["quantity"] . '</td>
         <td>' . $requests_aproved_data["statusmessage"] . '</td>
-        <td><a class="btn btn-danger"><i class="fas fa-times"></i></a></td>
+        <td><a class="btn btn-danger" href="?afkeuren=' . $requests_aproved_data["id"] . '"><i class="fas fa-times"></i></a></td>
       </tr>';
 }
  ?>
