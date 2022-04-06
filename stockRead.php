@@ -59,6 +59,10 @@ include_once("./includes/header.php");
                             <th scope="col">Itam Name</th>
                             <th scope="col">Total Stock</th>
                             <th scope="col">Totaal Availability</th>
+                            <th scope="col">Itam Price</th>
+                            <!-- I added a iItam price row, You can see the prices from the database -->
+                            <th scope="col">Itam Total Sum</th>
+                            <!-- I added a iItam price row, You can see the prices from the database -->
                             <th scope="col"> </th>
                             <th scope="col"> </th>
                         </tr>
