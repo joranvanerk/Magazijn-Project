@@ -27,7 +27,8 @@ include_once("./includes/header.php");
      <td> " . $record["itemname"] . "</td>
      <td> " . $record["totalstock"] . "</td>
      <td> " . $record["totalavailability"] . "</td>
-     
+     <td> " . $record["itameprice"] . "</td>
+     <td> " . $record["itametotalsum"] . "</td>
      
 
      <td>
