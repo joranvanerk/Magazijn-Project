@@ -145,6 +145,71 @@ include_once("./includes/header.php");
                             </div>
                             <div class="col-md-6">
                                 <p>Web Developer and Designer</p>
+                                <!DOCTYPE html>
+<html>
+<body>
+
+<form action="" method="post" enctype="multipart/form-data">
+  Profielfoto aanpassen
+  <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
+  <input class="btn btn-primary text-white mt-3" type="submit" value="Upload Image" name="submit">
+</form>
+
+</body>
+</html>
+
+<?php
+
+if(isset($_POST["submit"])){
+$target_dir = "profileimages/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+  if($check !== false) {
+    echo "Bestand is een afbeelding - " . $check["mime"] . ".";
+    $uploadOk = 1;
+  } else {
+    echo "Bestand is geen afbeelding.";
+    $uploadOk = 0;
+  }
+}
+
+// Check if file already exists
+if (file_exists($target_file)) {
+  echo "Bestand bestaat al!";
+  $uploadOk = 0;
+}
+
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 500000) {
+  echo "Je bestand is te groot, mag maximaal 50MB zijn.";
+  $uploadOk = 0;
+}
+
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+  echo "Sorry, enkel JPG, JPEG, PNG & GIF bestanden zijn toegestaan.";
+  $uploadOk = 0;
+}
+
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+  echo "Sorry, je bestand is niet geupload.";
+// if everything is ok, try to upload file
+} else {
+  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    echo "Het bestand ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " is geupload.";
+  } else {
+    echo "Sorry, er was een error tijdens het uploaden van je bestand.";
+  }
+}
+}
+?>
                             </div>
                         </div>
                     </div>
@@ -153,5 +218,7 @@ include_once("./includes/header.php");
         </div>
     </form>
 </div>
+
+
 
  <?php include_once("./includes/footer.php"); ?>
