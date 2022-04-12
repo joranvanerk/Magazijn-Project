@@ -1,7 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 <?php
 include_once("./includes/meta.php");
 include_once("./includes/sidebar.php");
@@ -17,7 +13,20 @@ if(isset($_GET["delete"])){
 }
 
 //Code to connect to the data base, so you can see th information
- $sql = "SELECT * FROM `stock`";
+//query for the categories
+if(isset($_GET["cat"])){
+    if($_GET["cat"] == "Elektronica"){  
+        $sql = "SELECT * FROM `stock` WHERE `cat`='Elektronica'";
+    }
+    else if($_GET["cat"] == "Leermiddelen"){  
+        $sql = "SELECT * FROM `stock` WHERE `cat`='Leermiddelen'";
+    }
+    else if($_GET["cat"] == "Overig"){  
+        $sql = "SELECT * FROM `stock` WHERE `cat`='Overig'";
+    }
+}else{
+    $sql = "SELECT * FROM `stock`";
+}
 
  $result = mysqli_query($conn, $sql);
 
@@ -30,6 +39,7 @@ if(isset($_GET["delete"])){
   while ($record = mysqli_fetch_assoc($result)) 
   {
       //code to get the code in the right way, there in lowercasses
+      
    $records .= "<tr>
      <th scope='row'>" . $record["id"] . "</th>
      <td> " . $record["itemname"] . "</td>
@@ -55,6 +65,21 @@ if(isset($_GET["delete"])){
  // var_dump($records);
 ?>
 <!-- Html code staart here, this is what you will see when you go on the page -->
+<!-- dropdown menu with the cat names -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Categorie
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="./stockread">Alles</a></li>
+    <li><a class="dropdown-item" href="?cat=Elektronica">Elektronica</a></li>
+    <li><a class="dropdown-item" href="?cat=Leermiddelen">Leermiddelen</a></li>
+    <li><a class="dropdown-item" href="?cat=Overig">Overig</a></li>
+  </ul>
+</div>
+
+
+
 <div class="card">
     <div class="container-fluid">
         <div class="row">
