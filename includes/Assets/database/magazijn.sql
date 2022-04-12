@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 12 apr 2022 om 12:29
+-- Gegenereerd op: 12 apr 2022 om 13:03
 -- Serverversie: 5.7.31
 -- PHP-versie: 7.3.21
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `magazijn`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `categorie`
+--
+
+DROP TABLE IF EXISTS `categorie`;
+CREATE TABLE IF NOT EXISTS `categorie` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titel` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `categorie`
+--
+
+INSERT INTO `categorie` (`id`, `titel`) VALUES
+(1, 'Elektronica'),
+(2, 'Leermiddelen'),
+(3, 'Overig');
 
 -- --------------------------------------------------------
 
