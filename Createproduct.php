@@ -22,7 +22,7 @@ while($get_categorie_data = mysqli_fetch_assoc($get_categorie_query)){
 }
 
 ?>
-
+<!-- The form for creating a product -->
 <form action="" method="POST">
     <input class="form-control" type="text" name="name" placeholder="Itemname">
     <br>

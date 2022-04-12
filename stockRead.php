@@ -13,6 +13,7 @@ if(isset($_GET["delete"])){
 }
 
 //Code to connect to the data base, so you can see th information
+//query for the categories
 if(isset($_GET["cat"])){
     if($_GET["cat"] == "Elektronica"){  
         $sql = "SELECT * FROM `stock` WHERE `cat`='Elektronica'";
@@ -64,6 +65,7 @@ if(isset($_GET["cat"])){
  // var_dump($records);
 ?>
 <!-- Html code staart here, this is what you will see when you go on the page -->
+<!-- dropdown menu with the cat names -->
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Categorie
