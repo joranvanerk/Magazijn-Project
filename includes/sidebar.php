@@ -149,6 +149,12 @@ document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
         <div class="col">
+          <!-- <hr style="margin-bottom: 0.5rem;"> -->
+        <a href="./stockread" class="menuitem" ><i class="fas fa-shopping-cart"></i> Voorraad</a>
+        </div>
+      </div>
+      <div class="row spacingitem" style="margin-left: 1vw;" >
+        <div class="col">
         <li class="nav-item has-submenu">
     		<a class="nav-link nav-edit menuitem"><i class="fas fa-box"></i> ArtikelBeheer</a>
     		<ul class="submenu collapse">
