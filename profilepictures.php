@@ -21,7 +21,7 @@ include_once("./includes/header.php");
 
 if(isset($_POST["submit"])){
 $target_dir = "profileimages/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["123"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 

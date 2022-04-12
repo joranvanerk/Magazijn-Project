@@ -19,11 +19,14 @@ include_once("./includes/header.php");
 
 <?php
 
+$username_user = $_SESSION["username"];
+
 if(isset($_POST["submit"])){
 $target_dir = "profileimages/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$filename = basename($_FILES["fileToUpload"]["name"]);
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
@@ -63,10 +66,13 @@ if ($uploadOk == 0) {
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     echo "Het bestand ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " is geupload.";
+    mysqli_query($conn, "UPDATE `users` SET `profilepicture` = '$filename' WHERE `users`.`username` = '$username_user';");
   } else {
     echo "Sorry, er was een error tijdens het uploaden van jouw bestand.";
   }
 }
+
+
 }
 ?>
 
