@@ -30,6 +30,7 @@ if(isset($_GET["delete"])){
   while ($record = mysqli_fetch_assoc($result)) 
   {
       //code to get the code in the right way, there in lowercasses
+      
    $records .= "<tr>
      <th scope='row'>" . $record["id"] . "</th>
      <td> " . $record["itemname"] . "</td>
@@ -55,6 +56,20 @@ if(isset($_GET["delete"])){
  // var_dump($records);
 ?>
 <!-- Html code staart here, this is what you will see when you go on the page -->
+<div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  categorieën
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+
+
 <div class="card">
     <div class="container-fluid">
         <div class="row">
