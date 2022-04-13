@@ -48,13 +48,11 @@ if(isset($_GET["cat"])){
 
 
      <td>
-       <a href='./update.php?id=" . $record["id"] . "'>
-       <button style='background-color:green; border-color:black; color:white' > Update </button>
-       </a>
+       <a class='btn btn-success' href='./update.php?id=" . $record["id"] . "'>Update</a>
      </td >
 
      <td>
-        <a href='?delete=" . $record["id"] . "' class='btn' style='background-color:red; border-color:black; color:white'>
+        <a href='?delete=" . $record["id"] . "' class='btn btn-danger'>
             Delete
         </a>
       </td >
