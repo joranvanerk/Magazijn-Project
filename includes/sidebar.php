@@ -159,7 +159,6 @@ document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
     		<a class="nav-link nav-edit menuitem"><i class="fas fa-box"></i> ArtikelBeheer</a>
     		<ul class="submenu collapse">
     			<li><a class="nav-link nav-edit-item" href="createproduct">Product aanmaken</a></li>
-    			<li><a class="nav-link nav-edit-item" href="aanvragen">Aanvragen </a></li>
     			<li><a class="nav-link nav-edit-item" href="#">Opslag beheren </a> </li>
     		</ul>
     	</li>
