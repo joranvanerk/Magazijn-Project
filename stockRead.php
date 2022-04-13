@@ -45,7 +45,8 @@ if(isset($_GET["cat"])){
      <td> " . $record["itemname"] . "</td>
      <td> " . $record["totalstock"] . "</td>
      <td> " . $record["totalavailability"] . "</td>
-     
+     <td> " . $record["itameprice"] . "</td>
+     <td> " . $record["itametotalsum"] . "</td>
      
 
      <td>
@@ -92,6 +93,10 @@ if(isset($_GET["cat"])){
                             <th scope="col">Item Name</th>
                             <th scope="col">Total Stock</th>
                             <th scope="col">Totaal Availability</th>
+                            <th scope="col">Itam Price</th>
+                            <!-- I added a iItam price row, You can see the prices from the database -->
+                            <th scope="col">Itam Total Sum</th>
+                            <!-- I added a iItam price row, You can see the prices from the database -->
                             <th scope="col"> </th>
                             <th scope="col"> </th>
                         </tr>
