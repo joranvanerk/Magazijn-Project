@@ -7,19 +7,19 @@ include_once("./includes/header.php");
 if(isset($_GET["afkeuren"])){
   $id_given = cleaning($_GET["afkeuren"]);
   mysqli_query($conn, "UPDATE `requests` SET `status`='0' WHERE `id`='$id_given'");
-  echo '<meta http-equiv="refresh" content="0; URL=./aanvragen">';
+  echo '<meta http-equiv="refresh" content="0; URL=./requests">';
 }
 
 if(isset($_GET["goedkeuren"])){
   $id_given = cleaning($_GET["goedkeuren"]);
   mysqli_query($conn, "UPDATE `requests` SET `status`='1' WHERE `id`='$id_given'");
-  echo '<meta http-equiv="refresh" content="0; URL=./aanvragen">';
+  echo '<meta http-equiv="refresh" content="0; URL=./requests">';
 }
 
 if(isset($_GET["verwijder"])){
   $id_given = cleaning($_GET["verwijder"]);
   mysqli_query($conn, "UPDATE `requests` SET `status`='2' WHERE `id`='$id_given'");
-  echo '<meta http-equiv="refresh" content="0; URL=./aanvragen">';
+  echo '<meta http-equiv="refresh" content="0; URL=./requests">';
 }
 
 
