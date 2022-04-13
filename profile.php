@@ -20,6 +20,8 @@ else if($userdata["permissions"] == 3){
   $userrole = "Gebruiker";
 }else if($userdata["permissions"] == 99){
   $userrole = "Non-Actief";
+}else{
+  $userrole = "Niet beschikbaar"
 }
 
 ?>
