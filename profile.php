@@ -2,20 +2,77 @@
 include_once("./includes/meta.php");
 include_once("./includes/sidebar.php");
 include_once("./includes/header.php");
+
+$username = $_SESSION["username"];
+$get_user_data_query = mysqli_query($conn, "SELECT * FROM `users` WHERE `username`='$username'");
+$userdata = mysqli_fetch_assoc($get_user_data_query);
+$userrole = "Niet beschikbaar";
+
+if($userdata["permissions"] == 0){
+  $userrole = "Beheerder";
+}else if($userdata["permissions"] == 1){
+  $userrole = "Manager";
+}
+else if($userdata["permissions"] == 2){
+  $userrole = "Medewerker";
+}
+else if($userdata["permissions"] == 3){
+  $userrole = "Gebruiker";
+}else if($userdata["permissions"] == 99){
+  $userrole = "Non-Actief";
+}
+
 ?>
 
-<!DOCTYPE html>
-<html>
-<body>
-
-<form action="" method="post" enctype="multipart/form-data">
-  Profielafbeelding bewerken:
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
-</form>
-
-</body>
-</html>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center">Profielfoto instellen</h3>
+          <br>
+          <form action="" method="post" enctype="multipart/form-data">
+            <input class="form-control" type="file" style="margin-bottom: 15px;" name="fileToUpload" id="fileToUpload">
+            <input class="form-control btn btn-secondary" type="submit" value="Upload Image" name="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center">Profiel</h3>
+          <div class="container">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Gebruikersnaam:</th>
+                  <td><?= $userdata["username"] ?></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Email:</th>
+                  <td><?= $userdata["mail"] ?></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Gebruikersrol:</th>
+                  <td><?= $userrole ?></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php
 
@@ -71,4 +128,3 @@ if ($uploadOk == 0) {
 ?>
 
 <?php include_once("./includes/footer.php"); ?>
-
