@@ -15,13 +15,13 @@ if(isset($_GET["delete"])){
 //Code to connect to the data base, so you can see th information
 //query for the categories
 if(isset($_GET["cat"])){
-    if($_GET["cat"] == "Elektronica"){  
+    if($_GET["cat"] == "Elektronica"){
         $sql = "SELECT * FROM `stock` WHERE `cat`='Elektronica'";
     }
-    else if($_GET["cat"] == "Leermiddelen"){  
+    else if($_GET["cat"] == "Leermiddelen"){
         $sql = "SELECT * FROM `stock` WHERE `cat`='Leermiddelen'";
     }
-    else if($_GET["cat"] == "Overig"){  
+    else if($_GET["cat"] == "Overig"){
         $sql = "SELECT * FROM `stock` WHERE `cat`='Overig'";
     }
 }else{
@@ -31,23 +31,21 @@ if(isset($_GET["cat"])){
  $result = mysqli_query($conn, $sql);
 
   $count = mysqli_num_rows($result);
- 
+
  $result = mysqli_query($conn, $sql);
-  
+
  $records = "";
 
-  while ($record = mysqli_fetch_assoc($result)) 
+  while ($record = mysqli_fetch_assoc($result))
   {
       //code to get the code in the right way, there in lowercasses
-      
    $records .= "<tr>
      <th scope='row'>" . $record["id"] . "</th>
      <td> " . $record["itemname"] . "</td>
      <td> " . $record["totalstock"] . "</td>
      <td> " . $record["totalavailability"] . "</td>
-     <td> " . $record["itameprice"] . "</td>
-     <td> " . $record["itametotalsum"] . "</td>
-     
+     <td> " . $record["pricing"] . "</td>
+
 
      <td>
        <a href='./update.php?id=" . $record["id"] . "'>
@@ -67,19 +65,24 @@ if(isset($_GET["cat"])){
 ?>
 <!-- Html code staart here, this is what you will see when you go on the page -->
 <!-- dropdown menu with the cat names -->
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Categorie
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="./stockread">Alles</a></li>
-    <li><a class="dropdown-item" href="?cat=Elektronica">Elektronica</a></li>
-    <li><a class="dropdown-item" href="?cat=Leermiddelen">Leermiddelen</a></li>
-    <li><a class="dropdown-item" href="?cat=Overig">Overig</a></li>
-  </ul>
+<div class="card">
+  <div class="card-body text-center">
+    <h3 class="text-center">Sorteer opties</h3>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Categorie
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="./stockread">Alles</a></li>
+        <li><a class="dropdown-item" href="?cat=Elektronica">Elektronica</a></li>
+        <li><a class="dropdown-item" href="?cat=Leermiddelen">Leermiddelen</a></li>
+        <li><a class="dropdown-item" href="?cat=Overig">Overig</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-
+<br>
 
 <div class="card">
     <div class="container-fluid">
@@ -90,12 +93,10 @@ if(isset($_GET["cat"])){
                     <thead>
                         <tr>
                             <th scope="col">id</th>
-                            <th scope="col">Item Name</th>
-                            <th scope="col">Total Stock</th>
-                            <th scope="col">Totaal Availability</th>
-                            <th scope="col">Itam Price</th>
-                            <!-- I added a iItam price row, You can see the prices from the database -->
-                            <th scope="col">Itam Total Sum</th>
+                            <th scope="col">Voorwerp naam</th>
+                            <th scope="col">Totale voorraad</th>
+                            <th scope="col">Totale beschikbaarheid</th>
+                            <th scope="col">Voorwerp prijs</th>
                             <!-- I added a iItam price row, You can see the prices from the database -->
                             <th scope="col"> </th>
                             <th scope="col"> </th>
