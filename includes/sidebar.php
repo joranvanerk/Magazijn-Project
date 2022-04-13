@@ -177,7 +177,7 @@ document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
         <div class="col">
-        <a href="" class="menuitem" ><i class="far fa-envelope"></i> Aanvragen</a>
+        <a href="requests" class="menuitem" ><i class="far fa-envelope"></i> Aanvragen</a>
         </div>
       </div>
       <div class="row spacingitem" style="margin-left: 1vw;" >
