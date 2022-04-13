@@ -8,9 +8,10 @@ if(isset($_POST["submit"])){
   $name = cleaning($_POST['name']);
   $stock = cleaning($_POST["stock"]);
   $cat = cleaning($_POST["cat"]);
+  $pricing = cleaning($_POST["pricing"]);
   // execute query with cleaned variables
-  mysqli_query($conn, "INSERT INTO `stock` (`id`, `itemname`, `totalstock`, `totalavailability`, `cat`)
-  VALUES (NULL, '$name', '$stock', '1', '$cat')");
+  mysqli_query($conn, "INSERT INTO `stock` (`id`, `itemname`, `totalstock`, `totalavailability`, `cat`, `pricing`)
+  VALUES (NULL, '$name', '$stock', '1', '$cat', '$pricing')");
   echo $cat;
 }
 
@@ -24,9 +25,11 @@ while($get_categorie_data = mysqli_fetch_assoc($get_categorie_query)){
 ?>
 <!-- The form for creating a product -->
 <form action="" method="POST">
-    <input class="form-control" type="text" name="name" placeholder="Itemname">
+    <input class="form-control" type="text" name="name" placeholder="Voorwerp naam">
     <br>
-    <input class="form-control" type="text" name="stock" placeholder="Totalstock">
+    <input class="form-control" type="text" name="stock" placeholder="Totale voorraad">
+    <br>
+    <input class="form-control" type="text" name="pricing" min="0" placeholder="Prijs">
     <br>
     <select class="form-select" name="cat" aria-label="Default select example">
       <option value="Overig" selected>Selecteer categorie</option>
