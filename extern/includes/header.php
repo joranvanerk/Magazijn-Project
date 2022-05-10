@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 <!-- navbar color -->
-<nav class="navbar navbar-light justify-content-between" style="background-color: #588caa;">
+<nav class="navbar navbar-light justify-content-between" style="background-color: #5858aa;">
 
   <!-- search bar -->
   <form class="responsivemb"  action="" method="post" autocomplete="off" style="margin-left: 20px">

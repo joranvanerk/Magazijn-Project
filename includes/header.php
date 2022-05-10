@@ -13,7 +13,7 @@
       </div>
     <button style="opacity: 0%;" type="submit" name="nav_submit"></button>
   </form>
-
+  
   <!-- user page icon -->
   <a class="navbar-brand text-white" href="profile.php"><?= $_SESSION["username"] ?> <i class="fa fa-user text-white fa-2xl"></i></a>
 

@@ -61,14 +61,14 @@ if(isset($_POST["inloggen"])){
 
 .btn{
   transition: 0.3s;
-  background-color: #588CAA;
-  border-color: #588CAA;
+  background-color: #5858aa;
+  border-color: #5858aa;
 }
 
 .btn:hover{
   transition: 0.3s;
-  background-color: #588CAA;
-  border-color: #588CAA;
+  background-color: #5858aa;
+  border-color: #5858aa;
   margin-right: 5px;
   margin-left: 5px;
 }

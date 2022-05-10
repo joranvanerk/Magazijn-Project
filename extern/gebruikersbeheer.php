@@ -133,7 +133,7 @@ while($get_users_data = mysqli_fetch_assoc($get_users_query)){
         </select>
       </div>
       <div class="d-grid gap-2">
-    <button type="submit" name="submit" class="btn" style="background-color: #588CAA; color: white;">Aanmaken</button>
+    <button type="submit" name="submit" class="btn" style="background-color: #5858aa; color: white;">Aanmaken</button>
   </div>
   </form>
 </div>

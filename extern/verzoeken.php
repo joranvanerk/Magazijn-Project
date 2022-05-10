@@ -11,7 +11,7 @@ include_once("./includes/header.php");
  <div class="card">
   <div class="card-body text-center">
     <h5 class="card-title">Openstaande verzoeken</h5>
-    <p class="card-text" style="color: #588CAA;">
+    <p class="card-text" style="color: #5858aa;">
       Er is op dit moment geen nieuws
     </p>
   </div>
