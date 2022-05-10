@@ -191,6 +191,12 @@ document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
 <!-- <hr style=" margin-top: 0.5rem;"> -->
         </div>
       </div>
+      <div class="row spacingitem" style="margin-left: 1vw;" >
+        <div class="col">
+      <!-- switch location -->
+      <a href="../extern/" class="btn btn-outline-danger">Switch naar extern</a>
+    </div>
+  </div>
     </div>
     </div>
   </div>

@@ -48,7 +48,7 @@
 .menuitem{
   font-size: 1.2vw;
   text-decoration: none;
-  color: #588CAA;
+  color: #5858aa;
   transition: 0.3s;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -70,7 +70,7 @@
 }
 
 .nav-edit-item{
-  color: #588CAA;
+  color: #5858aa;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -191,6 +191,12 @@ document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
 <!-- <hr style=" margin-top: 0.5rem;"> -->
         </div>
       </div>
+      <div class="row spacingitem" style="margin-left: 1vw;" >
+        <div class="col">
+      <!-- switch location -->
+      <a href="../../" class="btn btn-outline-danger">Switch naar intern</a>
+    </div>
+  </div>
     </div>
     </div>
   </div>
