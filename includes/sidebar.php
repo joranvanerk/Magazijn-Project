@@ -161,6 +161,7 @@ document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
     			<li><a class="nav-link nav-edit-item" href="createproduct">Product aanmaken</a></li>
     			<li><a class="nav-link nav-edit-item" href="aanvragen">Aanvragen </a></li>
     			<li><a class="nav-link nav-edit-item" href="#">Opslag beheren </a> </li>
+          <li><a class="nav-link nav-edit-item" href="cardsartikel">cards </a> </li>
     		</ul>
     	</li>
         </div>
