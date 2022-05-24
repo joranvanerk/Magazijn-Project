@@ -17,7 +17,7 @@
             </p>
     </div>
     <!-- Photo -->
-    <img src="./includes/Assets/Img/acer1.png">
+    <img src="./includes/Assets/Img/dennis.png">
 </body>
 </html>
 
