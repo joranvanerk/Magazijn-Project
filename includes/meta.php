@@ -31,4 +31,29 @@ function addlog($action, $username){
   mysqli_query($conn, "INSERT INTO `log` (`id`, `actie`, `user`, `datetime`) VALUES (NULL, '$action', '$username', '$datetime');");
 }
 
+//page permission controller
+function pagePermission($role)
+{
+  //obtain current session role
+  $currentRole = $_SESSION["rol"];
+
+  //als meegegeven role niet voldoet aan rol van de gebruiker
+  if (!$role == $currentRole){
+    //No access
+    echo '<meta http-equiv="refresh" content="0; URL=./dashboard.php">';
+
+  } else {
+    //access, optional message 
+  }
+
+  //0 superuser
+  //1 financial manager
+  //2 warehouse manager
+  //3 student
+  //99 non actief
+
+}
+
+
+
  ?>
