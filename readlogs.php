@@ -27,7 +27,7 @@ while($logsdata = mysqli_fetch_assoc($get_logs_query)){
 
  <div class="card">
   <div class="card-body">
-    <h2 class="text-center">Alle logs</h2>
+    <h2 class="text-center">Meest recente veranderingen in de database.</h2>
     <table class="table table-striped">
   <thead>
     <tr>
