@@ -171,6 +171,7 @@ document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
     		<a class="nav-link nav-edit menuitem"><i class="fas fa-briefcase"></i> Bedrijfsbeheer</a>
     		<ul class="submenu collapse">
     			<li><a class="nav-link nav-edit-item" href="gebruikersbeheer">Gebruikersbeheer</a></li>
+          <li><a class="nav-link nav-edit-item" href="readlogs">Log overzicht</a></li>
     		</ul>
     	</li>
         </div>
