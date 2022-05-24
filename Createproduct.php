@@ -35,11 +35,11 @@ while($get_categorie_data = mysqli_fetch_assoc($get_categorie_query)){
        </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">stock</label>
-        <input type="email" name="stock" class="form-control" placeholder="vul hier je email adres in" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" name="stock" class="form-control" placeholder="vul hier het aantal in" id="exampleInputEmail1" aria-describedby="emailHelp">
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">pricing</label>
-        <input type="password" name="password" placeholder="vul hier uw wachtwoord in" class="form-control" id="exampleInputPassword1">
+        <input type="text" name="pricing" placeholder="vul heir de prijs in" class="form-control" id="exampleInputPassword1">
       </div>
       <select class="form-select" name="cat" aria-label="Default select example">
       <option value="Overig" selected>Selecteer categorie</option>
