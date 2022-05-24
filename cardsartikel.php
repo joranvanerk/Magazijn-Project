@@ -11,8 +11,8 @@
     <!-- Cards info -->
     <div class="card">
         <div class="content">
-            <h2>Acer Laptop</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aspernatur dolores ea voluptatum corporis sapiente voluptate quibusdam ipsa est ratione neque laboriosam ipsam explicabo, doloremque architecto exercitationem harum cum nisi?
+            <h2>C# met Unity</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aspernatur dolores ea voluptatum corporis sapiente voluptate quibusdam ipsa est ratione neque laboriosam ipsam explicabo.
             <a href="#">Bestellen</a>
             </p>
     </div>
