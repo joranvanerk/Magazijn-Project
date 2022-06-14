@@ -15,6 +15,11 @@
 
 // start session
 //mvc (maak hier class aan)
+class TestClass
+{
+  
+}
+
 session_start();
 
 if(isset($_GET["logout"])){
