@@ -24,6 +24,8 @@ if(isset($_GET["logout"])){
 // start connection with database
 include_once("./includes/db.php");
 
+
+
 // add a log to database
 function addlog($action, $username){
   global $conn;
