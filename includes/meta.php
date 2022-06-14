@@ -56,6 +56,17 @@ function pagePermission($role)
 
 }
 
-
+  //page permission controller
+function roleSecurity($role)
+{
+  //obtain current session role
+  if(!isset($_SESSION["rol"]))
+  {
+    return "Rol bestaat niet.";
+  } else
+  {
+    $currentRole = $_SESSION["rol"];
+  }
+}
 
  ?>
