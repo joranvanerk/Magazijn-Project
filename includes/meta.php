@@ -14,6 +14,7 @@
 <?php
 
 // start session
+//mvc (maak hier class aan)
 session_start();
 
 if(isset($_GET["logout"])){
