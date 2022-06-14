@@ -108,20 +108,20 @@ while($get_users_data = mysqli_fetch_assoc($get_users_query)){
 <!-- card to make a new user -->
 <div class="card">
  <div class="card-body">
-   <h2 class="text-center">Nieuwe gebruiker</h2>
+   <h2 class="text-center">Maak een nieuwe gebruiker</h2>
     <div class="container">
      <form action="" method="POST">
        <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">Gebruikersnaam</label>
-         <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+         <input type="text" name="name" class="form-control" placeholder="vul hier je gebruikersnaam in" id="exampleInputEmail1" aria-describedby="emailHelp">
        </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">E-mail</label>
-        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" name="email" class="form-control" placeholder="vul hier je email adres in" id="exampleInputEmail1" aria-describedby="emailHelp">
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Wachtwoord</label>
-        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        <input type="password" name="password" placeholder="vul hier uw wachtwoord in" class="form-control" id="exampleInputPassword1">
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Rol</label>

@@ -65,7 +65,8 @@ if(isset($_GET["cat"])){
 <!-- dropdown menu with the cat names -->
 <div class="card">
   <div class="card-body text-center">
-    <h3 class="text-center">Sorteer opties</h3>
+  <h3 class="text-center">De beschikbare voorraad in het magazijn</h3>
+    <h3 class="text-center">Sorteer bij categorie</h3>
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
         Categorie
@@ -86,7 +87,7 @@ if(isset($_GET["cat"])){
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <!--Op dzez plek komt de tabel -->
+                <!--Op deze plek komt de tabel -->
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -95,7 +96,7 @@ if(isset($_GET["cat"])){
                             <th scope="col">Totale voorraad</th>
                             <th scope="col">Totale beschikbaarheid</th>
                             <th scope="col">Voorwerp prijs</th>
-                            <!-- I added a iItam price row, You can see the prices from the database -->
+                            <!-- I added a item price row, You can see the prices from the database -->
                             <th scope="col"> </th>
                             <th scope="col"> </th>
                         </tr>
