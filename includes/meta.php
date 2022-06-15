@@ -30,7 +30,17 @@ include_once("./includes/db.php");
 function addlog($action, $username){
   global $conn;
   $datetime = date("d-m-Y H:i");
-  mysqli_query($conn, "INSERT INTO `log` (`id`, `actie`, `user`, `datetime`) VALUES (NULL, '$action', '$username', '$datetime');");
+  if(!isset($username)){
+    return "FOUT: Gebruikersnaam is niet meegegeven.";
+  }else{
+    if(!isset($action)){
+      return "FOUT: De actie is niet meegegeven.";
+    }else{
+      if(!mysqli_query($conn, "INSERT INTO `log` (`id`, `actie`, `user`, `datetime`) VALUES (NULL, '$action', '$username', '$datetime');")){
+        return "FOUT: Connectie fout, gelieve te melden bij webmaster.";
+      }
+    }
+  }
 }
 
 //page permission controller
@@ -45,7 +55,7 @@ function pagePermission($role)
     echo '<meta http-equiv="refresh" content="0; URL=./dashboard.php">';
 
   } else {
-    //access, optional message 
+    //access, optional message
   }
 
   //0 superuser
